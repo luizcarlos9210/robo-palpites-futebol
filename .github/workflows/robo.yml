@@ -1,8 +1,8 @@
 name: Robô Palpites Sofascore
 on:
   schedule:
-    - cron: '0 13 * * *'   # 10:00 Brasília
-    - cron: '0 21 * * *'   # 18:00 Brasília
+    - cron: '0 13 * * *'   # 06:00 Brasília
+    - cron: '0 21 * * *'   # 23:00 Brasília
   workflow_dispatch:
 
 env:
@@ -26,5 +26,5 @@ jobs:
           
       - name: Executar robô Sofascore
         env:
-          WHATSAPP_NUMBERS: ${{ secrets.WHATSAPP_NUMBERS }}
+          WHATSAPP_NUMBERS: ${{5521982344989 }}
         run: python main.py
