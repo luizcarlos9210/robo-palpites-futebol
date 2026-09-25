@@ -208,7 +208,7 @@ if __name__ == "__main__":
     
     if not jogos:
         print("ℹ️ Nenhum jogo encontrado para hoje/amanhã")
-        print("📌 Próxima verificação automática às 07h e 23h")
+        print("📌 Próxima verificação automática às 06h e 23h")
         sys.exit(0)
     
     print(f"⚽ {len(jogos)} jogo(s) encontrado(s)\n")
