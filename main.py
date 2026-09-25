@@ -179,7 +179,7 @@ def calcular_palpite(jogo):
 def criar_mensagem(j, d):
     fonte = "Sofascore" if j.get("fonte_real", True) else "Calendário Confirmado"
     return f"""⚽ PALPITE — {j['liga']}
-📅 {j['data']} às {j['hora']}
+📅 {j['07/10/2026']} às {j['hora']}
 🏟️ {j['casa']} 🆚 {j['fora']}
 
 📊 PROBABILIDADES:
