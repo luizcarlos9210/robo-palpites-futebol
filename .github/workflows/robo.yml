@@ -1,0 +1,26 @@
+name: Robô Palpites Futebol
+on:
+  schedule:
+    - cron: '0 13 * * *'   # 10:00 Brasilia
+    - cron: '0 21 * * *'   # 18:00 Brasilia
+  workflow_dispatch:      # Permite rodar manualmente
+
+jobs:
+  analisar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          
+      - name: Instalar dependências
+        run: pip install requests
+          
+      - name: Executar robô
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+          WHATSAPP_NUMBERS: ${{ secrets.WHATSAPP_NUMBERS }}
+        run: python main.py
