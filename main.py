@@ -13,7 +13,7 @@ except ImportError:
     from pysofascore import SofaScoreClient
 
 # ====================== CONFIGURAÇÕES ======================
-WHATSAPP_NUMBERS = os.environ.get("WHATSAPP_NUMBERS", "").split(",")
+WHATSAPP_NUMBERS = os.environ.get("5521982344989", "").split(",")
 
 # IDs das competições no Sofascore
 LIGAS_SOFASCORE = {
@@ -189,7 +189,7 @@ def criar_mensagem(j, d):
 
 🎯 PALPITE: {d['palpite']}
 
-⚠️ Fonte: {fonte} | Sem garantia de resultado
+⚠️ Fonte: {fonte} | BRAGUINHA REI DO TIPS
 🤖 Robô GitHub Actions + Sofascore
 """
 
@@ -223,7 +223,7 @@ if __name__ == "__main__":
         for num in WHATSAPP_NUMBERS:
             if num.strip():
                 link = gerar_link_whatsapp(msg, num.strip())
-                print(f"📱 Enviar para {num.strip()}: {link}")
+                print(f"📱 Enviar para {5521982344989 num.strip()}: {link}")
         print()
     
     print("✅ Análise concluída!")
